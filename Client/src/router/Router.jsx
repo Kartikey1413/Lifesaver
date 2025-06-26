@@ -6,7 +6,7 @@ import Home from '../pages/Home.jsx'
 import Profile from '../Dashboard/DonorAccount/Profile.jsx';
 import MyAccount from '../Dashboard/DonorAccount/MyAccount.jsx';
 import About from '../pages/About.jsx'
-import FindDonors from '../compoments/Search/FindDonors.jsx';
+import FindDonors from '../components/Search/FindDonors.jsx';
 import Eligibility from '../pages/Eligibility.jsx';
 import AllDonors from '../Dashboard/AdminPanel/AllDonors.jsx'
 import CreateDonors from '../Dashboard/DonorAccount/CreateDonors.jsx'
