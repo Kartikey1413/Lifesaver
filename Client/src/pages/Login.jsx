@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import LoginImg from "../assets/images/login.png";
+import LoginImg from "../assets/Images/login.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { AuthContext } from "../context/AuthContext";
