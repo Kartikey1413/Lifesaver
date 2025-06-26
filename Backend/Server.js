@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 // Middleware for CORS parsing
 const allowedOrigins = [
     "http://localhost:5173",
-    "https://lifesaver.vercel.app",
+    "https://lifesaver-blood-donors.vercel.app",
   ];
 app.use(
   cors({
