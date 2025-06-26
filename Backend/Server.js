@@ -2,7 +2,6 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import dotenv from "dotenv";
-import connectDB from "./utils/db.js";
 import bodyParser from "body-parser";
 import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js"
@@ -19,6 +18,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(bodyParser.json());
 
+mongoose
+  .connect(process.env.MONGO_URL)
+  .then(() => console.log("DB connected"))
+  .catch((err) => console.log(err));
 
 // Middleware for CORS parsing
 const allowedOrigins = [
@@ -48,6 +51,5 @@ app.get("/", (req, res) => {
   res.send("Welcome to the LifeSaver API!");
 });
 app.listen(PORT, () => {
-  connectDB();
   console.log(`Server is running on port ${PORT}`);
 });
