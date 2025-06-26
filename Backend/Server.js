@@ -44,7 +44,9 @@ app.use("api/user", userRoutes)
 app.use("/api/donors", donorsRoutes);
 app.use("/api/review", reviewRoutes);
 
-
+app.get("/", (req, res) => {
+  res.send("Welcome to the LifeSaver API!");
+});
 app.listen(PORT, () => {
   connectDB();
   console.log(`Server is running on port ${PORT}`);
