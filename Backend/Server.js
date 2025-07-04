@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.json());
-
+console.log("Environment Variables:", process.env);
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("DB connected"))
