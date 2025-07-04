@@ -1,10 +1,11 @@
 import express from "express";
+import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import authRoutes from "./routes/authRoutes.js";
-import userRoutes from "./routes/userRoutes.js"
+import userRoutes from "./routes/userRoutes.js";
 import donorsRoutes from "./routes/donorsRoutes.js";
 import reviewRoutes from "./routes/reviewRoutes.js";
 
@@ -26,9 +27,8 @@ mongoose
 // Middleware for CORS parsing
 const allowedOrigins = [
   "https://lifesaver-red.vercel.app",
-    "http://localhost:5173",
-    
-  ];
+  "http://localhost:5173",
+];
 app.use(
   cors({
     origin: function (origin, callback) {
@@ -44,7 +44,7 @@ app.use(
 
 // Routes
 app.use("/api/auth", authRoutes);
-app.use("/api/user", userRoutes)
+app.use("/api/user", userRoutes);
 app.use("/api/donors", donorsRoutes);
 app.use("/api/review", reviewRoutes);
 
