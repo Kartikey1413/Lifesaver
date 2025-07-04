@@ -15,12 +15,11 @@ const PORT = process.env.PORT || 8080;
 
 // Middleware for JSON parsing
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(bodyParser.json());
 
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("DB connected"))
   .catch((err) => console.log(err));
 
