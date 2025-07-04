@@ -4,6 +4,7 @@ import Login from '../pages/Login.jsx'
 import Register from '../pages/Register.jsx';
 import Home from '../pages/Home.jsx'
 import Profile from '../Dashboard/DonorAccount/Profile.jsx';
+import MyAccount from '../Dashboard/DonorAccount/MyAccount.jsx';
 import About from '../pages/About.jsx'
 import FindDonors from '../components/Search/FindDonors.jsx';
 import Eligibility from '../pages/Eligibility.jsx';
