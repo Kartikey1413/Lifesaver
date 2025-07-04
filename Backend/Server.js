@@ -26,7 +26,7 @@ mongoose
 // Middleware for CORS parsing
 const allowedOrigins = [
     "http://localhost:5173",
-    "https://lifesaver-pro.vercel.app",
+    "https://lifesaver-red.vercel.app",
   ];
 app.use(
   cors({
